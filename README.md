@@ -50,6 +50,7 @@ gunicorn==20.0.4
 ```
 
 ----pyaudio安装比较麻烦，解决方案----
+
 #linux下参考
 ```shell
 apt-get install libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0 portaudio19-dev python-all-dev python3-all-dev
@@ -62,6 +63,7 @@ brew install portaudio
 brew link --overwrite portaudio
 pip install pyaudio
 ```
+
 ----ctcdecode安装解决方案----
 ```shell
 git clone --recursive https://github.com/parlance/ctcdecode.git
@@ -84,9 +86,9 @@ apt-get install libsndfile1
 
 ## 数据和模型下载地址
 
-[AISHELL-1下载](http://www.aishelltech.com/kysjcp)
-[LM语言模型zh_giga.no_cna_cmn.prune01244.klm下载](https://deepspeech.bj.bcebos.com/zh_lm/zh_giga.no_cna_cmn.prune01244.klm)
-[预训练模型model_cer0_19_l15_pytorch.pth下载](https://download.csdn.net/download/quantbaby/15909010)
+[AISHELL-1下载](http://www.aishelltech.com/kysjcp)<br>
+[LM语言模型zh_giga.no_cna_cmn.prune01244.klm下载](https://deepspeech.bj.bcebos.com/zh_lm/zh_giga.no_cna_cmn.prune01244.klm)<br>
+[预训练模型model_cer0_19_l15_pytorch.pth下载](https://download.csdn.net/download/quantbaby/15909010)<br>
 
 **AISHELL-1数据集下载后解压放到data_aishell对应文件夹下**
 
