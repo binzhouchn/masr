@@ -144,7 +144,7 @@ labels.gz是pkle文件，应包含数据集标注中出现过的所有字符，�
 **注：如果是方式二处理，则data.py中MASRDataset类读取数据后处理的方式要有所改动**<br>
 原始数据集AISHELL-1已经给我们分好词，也可以自行用jieba分词
 
-[数据预处理代码notebook](AISHELL-1数据预处理.ipynb)
+[数据预处理代码notebook](AISHELL-1数据预处理.py)
 
 ## 模型训练(GPU)
 
