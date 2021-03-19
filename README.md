@@ -74,7 +74,7 @@ git clone --recursive https://github.com/parlance/ctcdecode.git
 cd ctcdecode
 pip install .
 ```
-如果你是在国外以上语句没有问题，如果不是则需要单独下载[openfst-1.6.7.tar.gz](https://download.csdn.net/download/quantbaby/15908785)和[boost_1_67_0.tar.gz](https://download.csdn.net/download/quantbaby/15909444)，解压到third_party目录下，然后去setup.py中注释掉以下这两行代码
+如果你是在国外以上语句没有问题，如果不是则需要单独下载[openfst-1.6.7.tar.gz](https://download.csdn.net/download/quantbaby/15908785)和[boost_1_67_0.tar.gz](https://download.csdn.net/download/quantbaby/15909444)，解压到third_party目录下，然后setup.py中注释掉以下这两行代码
 ```python
 download_extract('https://sites.google.com/site/openfst/home/openfst-down/openfst-1.6.7.tar.gz',
                  'third_party/openfst-1.6.7.tar.gz')
