@@ -186,7 +186,7 @@ python demo-record-recognize.py
 你可能听说过**词嵌入**（word embedding）。作为神经语言模型的底层，词嵌入可以将词映射到一个低维连续空间中，并且使意思相近或相关的词有着较近的cosine距离，通过比较这个距离，可以找出一个词的近义词<br>
 我们使用类似的思想将汉字嵌入到一个（较）低维的连续空间中，并使读音相近的汉字有着相近的cosine距离，并根据cosine距离来寻找音近字。如图，我们找到了嵌入空间中离「掉」最近的5个字，它们的读音也确实与「掉」接近<br>
 
-![声学嵌入](images/embedding.png)
+<img src="images/embedding.png" width="320">
 
 #### 使用MASR获取声学嵌入
 
