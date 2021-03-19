@@ -90,7 +90,7 @@ apt-get install libsndfile1
 
 ## 数据和模型下载地址
 
-[AISHELL-1下载](http://www.aishelltech.com/kysjcp)<br>
+[AISHELL-1数据集下载](http://www.aishelltech.com/kysjcp)<br>
 [LM语言模型zh_giga.no_cna_cmn.prune01244.klm下载](https://deepspeech.bj.bcebos.com/zh_lm/zh_giga.no_cna_cmn.prune01244.klm)<br>
 [预训练模型model_cer0_19_l15_pytorch.pth下载](https://download.csdn.net/download/quantbaby/15909010)<br>
 
