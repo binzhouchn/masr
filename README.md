@@ -25,8 +25,8 @@ MASR使用的是门控卷积神经网络（Gated Convolutional Network），网�
 
 ## 参考项目地址链接(原项目作者貌似不再维护，预训练模型存在无法下载和代码无法直接跑的问题)
 
-https://github.com/nl8590687/ASRT_SpeechRecognition
-https://github.com/nobody132/masr
+https://github.com/nl8590687/ASRT_SpeechRecognition<br>
+https://github.com/nobody132/masr<br>
 https://github.com/xxbb1234021/speech_recognition
 
 ## 依赖包
