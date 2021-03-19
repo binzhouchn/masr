@@ -31,6 +31,7 @@ https://github.com/xxbb1234021/speech_recognition
 
 ## 依赖包
 
+```text
 torch==1.6.0
 Levenshtein==0.12.0
 librosa==0.8.0
@@ -46,6 +47,7 @@ tqdm==4.50.2
 joblib==1.0.0
 werkzeug==1.0.0
 gunicorn==20.0.4
+```
 
 ----pyaudio安装比较麻烦，解决方案----
 #linux下参考
