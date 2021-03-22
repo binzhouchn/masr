@@ -92,11 +92,13 @@ apt-get install libsndfile1
 
 [AISHELL-1数据集下载](http://www.aishelltech.com/kysjcp)<br>
 [LM语言模型zh_giga.no_cna_cmn.prune01244.klm下载](https://deepspeech.bj.bcebos.com/zh_lm/zh_giga.no_cna_cmn.prune01244.klm)<br>
-[预训练模型model_cer0_19_l15_pytorch.pth下载](https://download.csdn.net/download/quantbaby/15909010)<br>
+[预训练模型（aishell-1数据集训练）下载](https://download.csdn.net/download/quantbaby/15909010)<br>
+[预训练模型（aishell,SCMC，thchs-30训练）下载](https://share.weiyun.com/3VWtGUBo)<br>
+[预训练模型（超大数据集训练，1300h+）下载](https://share.weiyun.com/drQfaovf)<br>
 
 **AISHELL-1数据集下载后解压放到data_aishell对应文件夹下**
 
-## 原始数据预处理
+## 原始数据预处理(以aishell-1为例)
 
 #### 预处理方式一
 你可以使用自己的数据集来训练模型。你的数据集需要包含至少以下3个文件：
