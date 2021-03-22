@@ -40,17 +40,17 @@ def record(f, time=5):
     stream.close()
 
 
+if __name__ == '__main__':
+    #直接跑该代码可以录自己的音保存成wav文件
+    record('../data_aishell/output.wav', time=2)
+
 # sounddevie版
 # import sounddevice as sd
 # from scipy.io.wavfile import write
-# framerate = 16000 # Sample rate
+# framerate = 24000 # Sample rate
 # channels = 1
-# seconds = 5 # Duration of recording
+# seconds = 2 # Duration of recording
+# print('录音中...')
 # myrecording = sd.rec(int(seconds * framerate), samplerate=framerate, channels=channels)
 # sd.wait() # Wait until recording is finished
-# write('../output.wav', framerate, myrecording) # Save as WAV file
-
-
-if __name__ == '__main__':
-    #直接跑该代码可以录自己的音保存成wav文件
-    record('../data_aishell/output.wav', time=5)
+# write('/Users/zhoubin/Downloads/wmm.wav', framerate, myrecording) # Save as WAV file
