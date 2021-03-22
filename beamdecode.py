@@ -48,5 +48,6 @@ def predict(f):
     return translate(model.vocabulary, out[0][0], out_len[0][0])
 
 if __name__ == '__main__':
+    #传入wav录音文件识别文本
     text = predict("data_aishell/BAC009S0765W0130.wav")
     print(text)
