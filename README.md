@@ -97,6 +97,7 @@ apt-get install libsndfile1
 | :---: | :---: |
 | AISHELL-1数据集下载 | [点击下载](http://www.aishelltech.com/kysjcp) |
 | LM语言模型zh_giga.no_cna_cmn.prune01244.klm | [点击下载](https://deepspeech.bj.bcebos.com/zh_lm/zh_giga.no_cna_cmn.prune01244.klm) |
+| LM超大语言模型zhidao_giga.klm(70G) | [点击下载](https://deepspeech.bj.bcebos.com/zh_lm/zhidao_giga.klm) |
 | 预训练模型（aishell-1数据集训练） | [点击下载](https://download.csdn.net/download/quantbaby/15909010) |
 | 预训练模型（aishell,SCMC，thchs-30训练） | [点击下载](https://share.weiyun.com/3VWtGUBo) |
 | 预训练模型（超大数据集训练，1300h+） | [点击下载](https://share.weiyun.com/drQfaovf) |
