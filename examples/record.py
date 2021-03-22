@@ -47,7 +47,7 @@ if __name__ == '__main__':
 # sounddevie版
 # import sounddevice as sd
 # from scipy.io.wavfile import write
-# framerate = 24000 # Sample rate
+# framerate = 16000 # Sample rate
 # channels = 1
 # seconds = 2 # Duration of recording
 # print('录音中...')
