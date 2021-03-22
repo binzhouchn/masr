@@ -236,3 +236,5 @@ python embedding.py
 2. 自行增量训练并更换GatedConv模型以达到更好工业级效果
 3. tensorflow重写[TODO]
 4. 欢迎在dev分支提交优化本项目
+
+附录：<br>
