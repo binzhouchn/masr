@@ -239,3 +239,4 @@ python embedding.py
 
 附录：<br>
 http://www.openslr.org/resources/33<br>
+http://www.openslr.org/resources/18<br>
