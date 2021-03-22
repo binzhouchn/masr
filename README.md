@@ -16,6 +16,7 @@ docker pull binzhouchn/masr:1.6.0-cuda10.1-cudnn7
 当然如果你不想用docker也行，有些包的安装解决方案我已给出<br>
 本项目是受masr项目启发重新创建的更加完善并且能直接跑的语音识别项目，环境、数据及数据预处理代码、网络结构及预训练模型都很全
 
+
 ## 原理
 
 MASR使用的是门控卷积神经网络（Gated Convolutional Network），网络结构类似于Facebook在2016年提出的Wav2letter。但是使用的激活函数不是ReLU或者是HardTanh，而是GLU（门控线性单元）。因此称作门控卷积网络。使用GLU的收敛速度比HardTanh要快。如果你想要研究卷积网络用于语音识别的效果，这个项目可以作为一个参考
@@ -32,6 +33,7 @@ MASR使用的是门控卷积神经网络（Gated Convolutional Network），网�
 https://github.com/nl8590687/ASRT_SpeechRecognition<br>
 https://github.com/nobody132/masr<br>
 https://github.com/xxbb1234021/speech_recognition
+
 
 ## 依赖包
 
@@ -88,17 +90,20 @@ download_extract('https://dl.bintray.com/boostorg/release/1.67.0/source/boost_1_
 apt-get install libsndfile1
 ```
 
+
 ## 数据和模型下载地址
 
 | 训练数据及模型 | 下载链接 |
 | :---: | :---: |
 | AISHELL-1数据集下载 | [点击下载](http://www.aishelltech.com/kysjcp) |
 | LM语言模型zh_giga.no_cna_cmn.prune01244.klm | [点击下载](https://deepspeech.bj.bcebos.com/zh_lm/zh_giga.no_cna_cmn.prune01244.klm) |
+| LM超大语言模型zhidao_giga.klm(70G) | [点击下载](https://deepspeech.bj.bcebos.com/zh_lm/zhidao_giga.klm) |
 | 预训练模型（aishell-1数据集训练） | [点击下载](https://download.csdn.net/download/quantbaby/15909010) |
 | 预训练模型（aishell,SCMC，thchs-30训练） | [点击下载](https://share.weiyun.com/3VWtGUBo) |
 | 预训练模型（超大数据集训练，1300h+） | [点击下载](https://share.weiyun.com/drQfaovf) |
 
 **AISHELL-1数据集下载后解压放到data_aishell对应文件夹下**
+
 
 ## 原始数据预处理(以aishell-1为例)
 
@@ -154,6 +159,7 @@ labels.gz是cpr文件，应包含数据集标注中出现过的所有字符，�
 
 [数据预处理代码notebook](AISHELL-1数据预处理.py)
 
+
 ## 音频转换
 
 自己提供的音频采样率可能不同，需要运行以下代码将采样率转成16000hz
@@ -170,6 +176,7 @@ file.writeframes(str_data)
 file.close()
 ```
 
+
 ## 模型训练(GPU)
 
 氪金玩家可自行训练，目前单卡V100跑每个epoch需要30min
@@ -178,6 +185,7 @@ sudo nvidia-docker run -v $PWD/masr:/workspace/masr  -w /workspace/masr binzhouc
 ```
 也可以用我训练好的模型（并不是训练最好的），[下载地址](https://download.csdn.net/download/quantbaby/15909010)<br>
 【*目前SOTA预训练模型可私信向我要】
+
 
 ## 模型预测(CPU)
 
@@ -195,6 +203,7 @@ sudo docker run -d -p 5005:5005 -v $PWD/masr:/workspace/masr  -w /workspace/masr
 网页界面显示<br>
 <img src="images/index.png" width="460">
 
+
 ## 录制自己的声音
 
 ```python
@@ -202,6 +211,7 @@ cd examples
 python demo-record-recognize.py
 ```
 直接跑examples中的demo-record-recognize.py，可以在看到提示「录音中」后开始说话，你有5秒钟的说话时间（可以自己在源码中更改）
+
 
 ## 使用声学嵌入寻找音近字
 
@@ -238,6 +248,8 @@ python embedding.py
 2. 自行增量训练并更换GatedConv模型以达到更好工业级效果
 3. tensorflow重写[TODO]
 4. 欢迎在dev分支提交优化本项目
+
+
 
 附录：<br>
 http://www.openslr.org/resources/33<br>
