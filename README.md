@@ -185,13 +185,15 @@ sudo nvidia-docker run -v $PWD/masr:/workspace/masr  -w /workspace/masr binzhouc
 
 #### 预测方式一
 可以跑examples下的demo-recognize.py；<br>
-不过推荐跑beamdecode.py，CTCBeam解压更加准确，记得修改要识别的wav文件地址
+推荐跑beamdecode.py，CTCBeam解压更加准确，记得修改要识别的wav文件地址
 
 #### 预测方式二
 起flask服务进行预测
 ```shell
 sudo docker run -d -p 5005:5005 -v $PWD/masr:/workspace/masr  -w /workspace/masr binzhouchn/masr:1.6.0-cuda10.1-cudnn7 gunicorn -b :5005 masr_server:app
 ```
+网页界面显示<br>
+<img src="images/index.png" width="460">
 
 ## 录制自己的声音
 
