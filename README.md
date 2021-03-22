@@ -96,7 +96,8 @@ apt-get install libsndfile1
 | 训练数据及模型 | 下载链接 |
 | :---: | :---: |
 | AISHELL-1数据集下载 | [点击下载](http://www.aishelltech.com/kysjcp) |
-| ST-Chinese-Mandarin-Corpus数据集下载 | [点击下载](http://www.openslr.org/resources/38/) |
+| ST-Chinese-Mandarin-Corpus数据集下载 | [点击下载](http://www.openslr.org/resources/38) |
+| THCHS-30数据集下载 | [点击下载](http://www.openslr.org/resources/18) |
 | LM语言模型zh_giga.no_cna_cmn.prune01244.klm | [点击下载](https://deepspeech.bj.bcebos.com/zh_lm/zh_giga.no_cna_cmn.prune01244.klm) |
 | LM超大语言模型zhidao_giga.klm(70G) | [点击下载](https://deepspeech.bj.bcebos.com/zh_lm/zhidao_giga.klm) |
 | 预训练模型（aishell-1数据集训练） | [点击下载](https://download.csdn.net/download/quantbaby/15909010) |
