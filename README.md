@@ -102,7 +102,7 @@ apt-get install libsndfile1
 你可以使用自己的数据集来训练模型。你的数据集需要包含至少以下3个文件：
  - train.index
  - dev.index
- - labels.json
+ - labels.gz
 
 train.index和dev.index为索引文件，表示音频文件和标注的对应关系，应具有如下的简单格式：
 ```text
@@ -111,7 +111,7 @@ train.index和dev.index为索引文件，表示音频文件和标注的对应关
 ...
 ```
 
-labels.gz是pkle文件，应包含数据集标注中出现过的所有字符，表示为一个list数组。其中开头首字符必须是无效字符（可任意指定，不和其他字符重复就行），预留给CTC作为blank label;建议索引0为'_'，索引28位' '
+labels.gz是cpr文件，应包含数据集标注中出现过的所有字符，表示为一个list数组。其中开头首字符必须是无效字符（可任意指定，不和其他字符重复就行），预留给CTC作为blank label;建议索引0为'_'，索引28位' '
 ```text
 [
    '_', // 第一个字符表示CTC空字符，可以随便设置，但不要和其他字符重复。
@@ -133,7 +133,7 @@ train.index和dev.index为索引文件，表示音频文件和标注的对应关
 ...
 ```
 
-labels.gz是pkle文件，应包含数据集标注中出现过的所有字符，表示为一个list数组。其中开头首字符必须是无效字符（可任意指定，不和其他字符重复就行），预留给CTC作为blank label;建议索引0为'_'，索引28位' '
+labels.gz是cpr文件，应包含数据集标注中出现过的所有字符，表示为一个list数组。其中开头首字符必须是无效字符（可任意指定，不和其他字符重复就行），预留给CTC作为blank label;建议索引0为'_'，索引28位' '
 ```text
 [
    '_', // 第一个字符表示CTC空字符，可以随便设置，但不要和其他字符重复。
@@ -149,6 +149,22 @@ labels.gz是pkle文件，应包含数据集标注中出现过的所有字符，�
 原始数据集AISHELL-1已经给我们分好词，也可以自行用jieba分词
 
 [数据预处理代码notebook](AISHELL-1数据预处理.py)
+
+## 音频转换
+
+自己提供的音频采样率可能不同，需要运行以下代码将采样率转成16000hz
+```python
+import wave
+f = wave.open(audio_path_r, "rb")
+str_data = f.readframes(f.getnframes())
+f.close()
+file = wave.open(audio_path_w, 'wb')
+file.setnchannels(1)
+file.setsampwidth(4)
+file.setframerate(16000)
+file.writeframes(str_data)
+file.close()
+```
 
 ## 模型训练(GPU)
 
