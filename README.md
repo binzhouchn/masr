@@ -244,9 +244,10 @@ python embedding.py
 ```
 
 
-## FURTHER
+## TODO
 
 1. 不是很推荐pyaudio+wave这个组合，可以自行换掉，用sounddevice+scipy(scipy.io.wavfile)或者pysoundfile
 2. 自行增量训练并更换GatedConv模型以达到更好工业级效果
-3. tensorflow重写[TODO]
-4. 欢迎在dev分支提交优化本项目
+3. tensorflow重写
+
+*欢迎在dev分支提交优化本项目
